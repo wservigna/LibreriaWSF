@@ -52,8 +52,6 @@ namespace WSF.Utils.Helpers
 
         }
 
-
-
         public static string Decrypt (string inputText)
 
         {
