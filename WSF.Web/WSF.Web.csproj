@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88EC9E0F-FC24-4419-ADFB-16A69AAA6735}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WSF.Web</RootNamespace>
+    <AssemblyName>WSF.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Facilities.Logging">
+      <HintPath>..\packages\Castle.LoggingFacility.3.3.0\lib\net45\Castle.Facilities.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.33.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Collections.Immutable.1.1.33-beta\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Startup\AbpWebConfigurationExtensions.cs" />
+    <Compile Include="Domain\Uow\Web\HttpContextCurrentUnitOfWorkProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\AbpWebApplication.cs" />
+    <Compile Include="Web\AbpWebModule.cs" />
+    <Compile Include="Web\Authorization\AuthorizationScriptManager.cs" />
+    <Compile Include="Web\Authorization\IAuthorizationScriptManager.cs" />
+    <Compile Include="Web\Configuration\AbpWebModuleConfiguration.cs" />
+    <Compile Include="Web\Configuration\IAbpWebModuleConfiguration.cs" />
+    <Compile Include="Web\HttpVerb.cs" />
+    <Compile Include="Web\Localization\AbpWebLocalizedMessages.cs" />
+    <Compile Include="Web\Localization\ILocalizationScriptManager.cs" />
+    <Compile Include="Web\Localization\LocalizationScriptManager.cs" />
+    <Compile Include="Web\Models\AjaxResponse.cs" />
+    <Compile Include="Web\Models\AjaxResponseOfTResult.cs" />
+    <Compile Include="Web\Models\DefaultErrorInfoConverter.cs" />
+    <Compile Include="Web\Models\ErrorInfo.cs" />
+    <Compile Include="Web\Models\ErrorInfoBuilder.cs" />
+    <Compile Include="Web\Models\IErrorInfoBuilder.cs" />
+    <Compile Include="Web\Models\IExceptionToErrorInfoConverter.cs" />
+    <Compile Include="Web\Models\ValidationErrorInfo.cs" />
+    <Compile Include="Web\Navigation\INavigationScriptManager.cs" />
+    <Compile Include="Web\Navigation\NavigationScriptManager.cs" />
+    <Compile Include="Web\Sessions\ISessionScriptManager.cs" />
+    <Compile Include="Web\Sessions\SessionScriptManager.cs" />
+    <Compile Include="Web\Settings\ISettingScriptManager.cs" />
+    <Compile Include="Web\Settings\SettingScriptManager.cs" />
+    <Compile Include="Web\WebAssemblyFinder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WSF\WSF.csproj">
+      <Project>{2d437fc7-c95b-4e30-9a7f-9fae2ff64466}</Project>
+      <Name>WSF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

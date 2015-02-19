@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <text name="InternalServerError" value="Un error ocurrio mientras validabamos!" />
+    <text name="ValidationError" value="La validacion no es correcta!" />
+  </texts>
+</localizationDictionary>

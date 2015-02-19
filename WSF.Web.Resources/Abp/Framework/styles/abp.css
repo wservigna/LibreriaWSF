@@ -1,0 +1,40 @@
+﻿.WSF-clickable {
+  cursor: pointer;
+}
+.WSF-dock-top {
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  margin: 0px;
+}
+.WSF-dock-right {
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+  margin: 0px;
+}
+.WSF-dock-bottom {
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+  margin: 0px;
+}
+.WSF-dock-left {
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+  margin: 0px;
+}
+.WSF-busy-indicator-small {
+  width: 36px;
+  height: 36px;
+}
+.WSF-busy-indicator-small.WSF-dock-left,
+.WSF-busy-indicator-small.WSF-dock-right {
+  height: auto;
+}
+/*# sourceMappingURL=WSF.css.map */
