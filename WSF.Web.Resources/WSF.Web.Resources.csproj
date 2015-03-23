@@ -48,8 +48,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Abp\Framework\styles\abp.css.map" />
-    <None Include="Abp\Framework\styles\abp.less" />
+    <None Include="WSF\Framework\styles\abp.css.map" />
+    <None Include="WSF\Framework\styles\abp.less" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -59,18 +59,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Abp\Framework\scripts\abp.js" />
-    <Content Include="Abp\Framework\scripts\libs\WSF.blockUI.js" />
-    <Content Include="Abp\Framework\scripts\libs\WSF.jquery.js" />
-    <Content Include="Abp\Framework\scripts\libs\WSF.spin.js" />
-    <Content Include="Abp\Framework\scripts\libs\WSF.toastr.js" />
-    <Content Include="Abp\Framework\scripts\libs\angularjs\WSF.ng.js" />
-    <Content Include="Abp\Framework\scripts\libs\requirejs\plugins\service.js" />
-    <Content Include="Abp\Framework\scripts\utils\ie10fix.js" />
-    <Content Include="Abp\Framework\styles\abp.css" />
-    <Content Include="Abp\Framework\styles\abp.min.css" />
-    <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
-    <Content Include="Localization\AbpWeb\AbpWeb.xml" />
+    <Content Include="WSF\Framework\scripts\wsf.js" />
+    <Content Include="WSF\Framework\scripts\libs\WSF.blockUI.js" />
+    <Content Include="WSF\Framework\scripts\libs\WSF.jquery.js" />
+    <Content Include="WSF\Framework\scripts\libs\WSF.spin.js" />
+    <Content Include="WSF\Framework\scripts\libs\WSF.toastr.js" />
+    <Content Include="WSF\Framework\scripts\libs\angularjs\WSF.ng.js" />
+    <Content Include="WSF\Framework\scripts\libs\requirejs\plugins\service.js" />
+    <Content Include="WSF\Framework\scripts\utils\ie10fix.js" />
+    <Content Include="WSF\Framework\styles\abp.css" />
+    <Content Include="WSF\Framework\styles\abp.min.css" />
+    <Content Include="WSF\Framework\styles\utils\ie10fix.css" />
+    <Content Include="Localization\WSF\WSFWeb.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

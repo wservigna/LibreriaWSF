@@ -5,8 +5,8 @@ using Castle.Core;
 namespace WSF.Domain.Uow.Web
 {
     /// <summary>
-    /// Implements <see cref="ICurrentUnitOfWorkProvider"/> using <see cref="HttpContext.Current"/>.
-    /// Fallbacks to <see cref="CallContextCurrentUnitOfWorkProvider"/> if <see cref="HttpContext.Current"/> is invalid.
+    /// Implementa <see cref="ICurrentUnitOfWorkProvider"/> usando <see cref="HttpContext.Current"/>.
+    /// Fallbacks hacia <see cref="CallContextCurrentUnitOfWorkProvider"/> si <see cref="HttpContext.Current"/> is invalido
     /// </summary>
     public class HttpContextCurrentUnitOfWorkProvider : ICurrentUnitOfWorkProvider, ISingletonDependency
     {
@@ -19,7 +19,7 @@ namespace WSF.Domain.Uow.Web
             {
                 if (HttpContext.Current == null)
                 {
-                    return CallContextCurrentUnitOfWorkProvider.StaticUow; //TODO: Can inject it?
+                    return CallContextCurrentUnitOfWorkProvider.StaticUow; 
                 }
 
                 return HttpContext.Current.Items[ContextKey] as IUnitOfWork;
@@ -29,7 +29,7 @@ namespace WSF.Domain.Uow.Web
             {
                 if (HttpContext.Current == null)
                 {
-                    CallContextCurrentUnitOfWorkProvider.StaticUow = value; //TODO: Can inject it?
+                    CallContextCurrentUnitOfWorkProvider.StaticUow = value; 
                     return;
                 }
 
